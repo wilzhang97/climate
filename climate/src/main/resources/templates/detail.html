@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Spring Boot Thymeleaf Hello World Example</title>
+
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="/">Climate.com</a>
+</nav>
+
+<main role="main" class="container">
+
+    <div class="starter-template">
+        <h1>Climate Detail Page</h1>
+       
+    </div>
+   <h1>Details</h1>
+    
+    	<p>Station Name: <input type="text" th:placeholder="${climate.stationName}" /></p>
+        <p>Province: <input type="text" th:placeholder="${climate.province}" /></p>
+        <p>Date: <input type="text" th:placeholder="${#dates.format(climate.date, 'yyyy-MM-dd')}" /></p>
+        <p>Mean Temp: <input type="text" th:placeholder="${climate.meanTemp}" /></p>
+        <p>Hightest Monthly Maxi Temp: <input type="text" th:placeholder="${climate.hightestMonthlymaxiTemp}" /></p>
+        <p>Lowest Monthly Min Temp: <input type="text" th:placeholder="${climate.lowestMonthlyMinTemp}" /></p>
+   
+    <a href="/">Back</a>
+    
+
+</main>
+<!-- /.container -->
+
+<script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+</body>
+</html>
