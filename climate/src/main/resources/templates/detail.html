@@ -25,12 +25,12 @@
     </div>
    <h1>Details</h1>
     
-    	<p>Station Name: <input type="text" th:placeholder="${climate.stationName}" /></p>
-        <p>Province: <input type="text" th:placeholder="${climate.province}" /></p>
-        <p>Date: <input type="text" th:placeholder="${#dates.format(climate.date, 'yyyy-MM-dd')}" /></p>
-        <p>Mean Temp: <input type="text" th:placeholder="${climate.meanTemp}" /></p>
-        <p>Hightest Monthly Maxi Temp: <input type="text" th:placeholder="${climate.hightestMonthlymaxiTemp}" /></p>
-        <p>Lowest Monthly Min Temp: <input type="text" th:placeholder="${climate.lowestMonthlyMinTemp}" /></p>
+    	<p>Station Name: <input type="text" th:field="${climate.stationName}" readonly/></p>
+        <p>Province: <input type="text" th:field="${climate.province}" readonly/></p>
+        <p>Date: <input type="date" th:value="${#dates.format(climate.date, 'yyyy-MM-dd')}" readonly /></p>
+        <p>Mean Temp: <input type="text" th:field="${climate.meanTemp}" readonly/></p>
+        <p>Hightest Monthly Maxi Temp: <input type="text" th:field="${climate.hightestMonthlymaxiTemp}" readonly/></p>
+        <p>Lowest Monthly Min Temp: <input type="text" th:field="${climate.lowestMonthlyMinTemp}" readonly/></p>
    
     <a href="/">Back</a>
     
